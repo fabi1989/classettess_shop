@@ -6,6 +6,7 @@
   <title>Classettes</title>
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/carrito.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="icon" type="img/png" href="img/img3.jpg">
 </head>
@@ -21,7 +22,7 @@
 
       <div class="header__content__right">
         <a href="formulario.html" class="header__btn">
-          <i class="fas fa-user"> Iniciar sesion</i>
+          <i class="fas fa-user"></i>
         </a>
         <a href="" class="header__btn">
           <i class="fas fa-shopping-cart"></i>
@@ -33,53 +34,30 @@
     </div>
   </header>
 
-  <div class="container-slider">
-    <div class="slider" id="slider">
-      <div class="slider__section">
-        <img src="img/slid1.jpg" alt="" class="slider__img">
-        <div class="slider__content">
-          <h2 class="slider__tittle">Men´s eyewear</h2>
-          <p class="slider__txt">Cool summer sale 50% off</p>
-          <a href="" class="slider__link">SHOP NOW</a>
-        </div>
-      </div>
-
-      <div class="slider__section">
-        <img src="img/slid2.jpg" alt="" class="slider__img">
-      </div>
-
-      <div class="slider__section">
-        <img src="img/slid3.jpg" alt="" class="slider__img">
-      </div>
-
-      <div class="slider__section">
-        <img src="img/slid4.jpg" alt="" class="slider__img">
-      </div>
-    </div>
-
-    <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
-    <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
-  </div>
 
   <main class="main">
     <div class="container">
-      <h2 class="main tittle">Nuevos diseños</h2>
+      <h2 class="main tittle">La tendencia perfecta para todos.</h2>
+
+      <div id="carrito" class="carrito">
+
+      </div>
 
       <section class="container-products">
         <div class="product">
           <img src="img/img1.jpg" alt="" class="product__img">
           <div class="product__description">
-            <h3 class="product__tittle">Constelaciones</h3>
-            <span class="product__price">575.00</span>
+            <h3 class="product__tittle">gris</h3>
+            <span class="product__price">3,50</span>
           </div>
-          <i class="product__icon fas fa-cart-plus"></i>
+          <i id="btn_agregarCarrito" type="button" class="product__icon fas fa-cart-plus"></i>
         </div>
 
         <div class="product">
           <img src="img/img2.jpg" alt="" class="product__img">
           <div class="product__description">
             <h3 class="product__tittle">gris</h3>
-            <span class="product__price">200.00</span>
+            <span class="product__price">3,50</span>
           </div>
           <i class="product__icon fas fa-cart-plus"></i>
         </div>
@@ -88,7 +66,7 @@
           <img src="img/img3.jpg" alt="" class="product__img">
           <div class="product__description">
             <h3 class="product__tittle">gris</h3>
-            <span class="product__price">200.00</span>
+            <span class="product__price">3,50</span>
           </div>
           <i class="product__icon fas fa-cart-plus"></i>
         </div>
@@ -97,7 +75,7 @@
           <img src="img/img4.jpg" alt="" class="product__img">
           <div class="product__description">
             <h3 class="product__tittle">gris</h3>
-            <span class="product__price">200.00</span>
+            <span class="product__price">3,50</span>
           </div>
           <i class="product__icon fas fa-cart-plus"></i>
         </div>
@@ -106,7 +84,7 @@
           <img src="img/img5.jpg" alt="" class="product__img">
           <div class="product__description">
             <h3 class="product__tittle">gris</h3>
-            <span class="product__price">200.00</span>
+            <span class="product__price">3,50</span>
           </div>
           <i class="product__icon fas fa-cart-plus"></i>
         </div>
@@ -115,7 +93,7 @@
           <img src="img/img6.jpg" alt="" class="product__img">
           <div class="product__description">
             <h3 class="product__tittle">gris</h3>
-            <span class="product__price">200.00</span>
+            <span class="product__price">3,50</span>
           </div>
           <i class="product__icon fas fa-cart-plus"></i>
         </div>
@@ -124,7 +102,7 @@
           <img src="img/img7.jpg" alt="" class="product__img">
           <div class="product__description">
             <h3 class="product__tittle">gris</h3>
-            <span class="product__price">200.00</span>
+            <span class="product__price">3,50</span>
           </div>
           <i class="product__icon fas fa-cart-plus"></i>
         </div>
@@ -133,7 +111,7 @@
           <img src="img/img8.jpg" alt="" class="product__img">
           <div class="product__description">
             <h3 class="product__tittle">gris</h3>
-            <span class="product__price">200.00</span>
+            <span class="product__price">3,50</span>
           </div>
           <i class="product__icon fas fa-cart-plus"></i>
         </div>
@@ -142,7 +120,7 @@
           <img src="img/img9.jpg" alt="" class="product__img">
           <div class="product__description">
             <h3 class="product__tittle">gris</h3>
-            <span class="product__price">200.00</span>
+            <span class="product__price">3,50</span>
           </div>
           <i class="product__icon fas fa-cart-plus"></i>
         </div>
@@ -151,7 +129,7 @@
           <img src="img/img10.jpg" alt="" class="product__img">
           <div class="product__description">
             <h3 class="product__tittle">gris</h3>
-            <span class="product__price">200.00</span>
+            <span class="product__price">3,50</span>
           </div>
           <i class="product__icon fas fa-cart-plus"></i>
         </div>
@@ -520,7 +498,7 @@
     </div>
   </main>
 
-  <script src="js/slider.js"></script>
+  <script src="./js/comprar.js"></script>
 </body>
 
 </html>

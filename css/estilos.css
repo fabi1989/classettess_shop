@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
   font-family: "SugarPie";
   src: url(C:\Users\usuario\Code\html-basico\fonts);
-}
+} */
 * {
   box-sizing: border-box;
 }
@@ -32,111 +32,23 @@ img {
 }
 
 
-.container-slider{
-  margin: 50px 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.slider {
-  display: flex;
-  width: 400%;
-  height: 300px;
-  margin-left: -100%;
-}
-.slider:before{
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0,0.5);
-  height: 100%;
-}
-.slider__section {
-  width: 100%; 
-}
-.slider__img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.slider__btn {
-  position:absolute;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255,0.7);
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  font-weight: bold;
-  font-family: monospace;
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 999;
-}
-.slider__btn:hover {
-  background: #fff;
-}
-.slider__btn--left { 
-  left: 10px; 
-}
-.slider__btn--right {
-  right: 10px;
-}
-.slider__content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: white;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  text-align: center;
-  z-index: 999;
-}
-.slider__tittle{
-  font-size: 2.2em;
-  margin: 0%;
-}
-.slider__txt{
-  margin: 15px 0;
-}
-.slider__link{
-  display:block;
-  border:  2px solid #FF4E00;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  width: 200px;
-  text-decoration: none;
-  width: 150px;
-  margin: 10px auto;
-}
-
-.slider__link:hover {
-  border-color: white;
-  width: 250px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-}
 
 /* ESTILOS DE PRODUCTOS*/
 
 .container-products {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
   cursor: pointer;
 }
 
 .product {
   border: 1px solid #ccc;
+  border-radius: 15px;
   padding: 20px;
   text-align: center;
   position: relative;
+  width: 250px;
 }
 .product:before {
   content: "Nuevo";
@@ -165,3 +77,4 @@ img {
   display: block;
   margin-top: 10px;
 }
+
