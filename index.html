@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/carrito.css">
+  <link rel="stylesheet" href="css/formulario.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="icon" type="img/png" href="img/img3.jpg">
 </head>
@@ -16,7 +17,7 @@
     <div class="header__content">
       <div class="header__content__left">
         <div class="">
-          <h1 class="header__title">Classettes</h1>
+          <a class="header__title">Classettes</a>
         </div>
       </div>
 
@@ -24,7 +25,7 @@
         <a href="formulario.html" class="header__btn">
           <i class="fas fa-user"></i>
         </a>
-        <a href="" class="header__btn">
+        <a href="carrito.html" class="header__btn">
           <i class="fas fa-shopping-cart"></i>
         </a>
         <a href="contact.html" class="header__btn">
@@ -33,17 +34,19 @@
       </div>
     </div>
   </header>
-
+<!--FIN HEADER-->
 
   <main class="main">
     <div class="container">
-      <h2 class="main tittle">La tendencia perfecta para todos.</h2>
-
+      <h2 class="main_tittle">La tendencia perfecta para todos.</h2>
+       
+      <!-- carrito de compras -->
       <div id="carrito" class="carrito">
+        
 
       </div>
-
-      <section class="container-products">
+      <!-- fin carrito de compras -->
+      <section id="productos" class="container-products">
         <div class="product">
           <img src="img/img1.jpg" alt="" class="product__img">
           <div class="product__description">
@@ -59,7 +62,7 @@
             <h3 class="product__tittle">gris</h3>
             <span class="product__price">3,50</span>
           </div>
-          <i class="product__icon fas fa-cart-plus"></i>
+          <i id="btn_agregarCarrito" type="button" class="product__icon fas fa-cart-plus"></i>
         </div>
 
         <div class="product">
@@ -68,7 +71,7 @@
             <h3 class="product__tittle">gris</h3>
             <span class="product__price">3,50</span>
           </div>
-          <i class="product__icon fas fa-cart-plus"></i>
+          <i class="product__icon fas fa-cart-plus" ></i>
         </div>
 
         <div class="product">

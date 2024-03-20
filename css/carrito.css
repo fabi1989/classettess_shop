@@ -1,3 +1,17 @@
-.producto{
-    width: 100px;
-}
+@font-face {
+    font-family: "SugarPie";
+    src: url("../fonts/SugarPie.ttf");
+  }
+  
+
+.title {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    margin: 0;
+    padding: 50px 0;
+    font-size: 30px;
+    color: black;
+    font-family: "SugarPie";
+  }
