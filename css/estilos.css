@@ -50,7 +50,7 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .product {
@@ -124,7 +124,7 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
 }
 
@@ -134,7 +134,7 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
 }
 
@@ -144,7 +144,7 @@ img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
 }
 
