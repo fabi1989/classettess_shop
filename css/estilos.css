@@ -92,7 +92,7 @@ img {
   margin-top: 10px;
 }
 
-#btn_agregarCarrito {
+.btn_agregarCarrito {
   background-color: transparent;
   border: 2px solid black;
   color: black;
@@ -107,7 +107,7 @@ img {
   transition: background-color 0.3s, color 0.3s;
 }
 
-#btn_agregarCarrito:hover {
+.btn_agregarCarrito:hover {
   /* background-color: #3498db;
   color: #fff; */
   background-color: black;
