@@ -15,3 +15,22 @@
     color: black;
     font-family: "SugarPie";
   }
+
+  .carrito{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .producto{
+    display: flex;
+  }
+  
+  .img{
+    width: 80px;
+  }
+
+  .btn_delete{
+    background-color: white;
+    height: 20px;
+  }

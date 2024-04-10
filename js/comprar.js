@@ -4,6 +4,7 @@ const imagenproducto = document.querySelectorAll('.product__img')
   
 for(let i=0; i<btn_producto.length;i++){
     btn_producto[i].addEventListener('click', ()=>{
+
         const div = document.createElement('div');
         const img = document.createElement('img');
         const precio=document.createElement('span');
@@ -11,9 +12,11 @@ for(let i=0; i<btn_producto.length;i++){
         div.classList.add('producto');
         img.classList.add('img');
         precio.classList.add('precio');
+        div.appendChild(addDelete());
+        
 
-        const imgSrc = imagenproducto[i].getAttribute('src');
-        img.src = imgSrc;
+        const imgsrc = imagenproducto[i].getAttribute('src');
+        img.src = imgsrc;
 
         precio.textContent = '3,50 €'; 
 
@@ -21,38 +24,22 @@ for(let i=0; i<btn_producto.length;i++){
         div.appendChild(precio);
         carrito.appendChild(div); 
 
-        agregarAlcarrito();
 
     });
 }
 
-/*btn_producto.addEventListener('click', ()=>{
-    
+function addDelete(){
+    const btnDelete = document.createElement("button");
+    btnDelete.textContent='X';
+    btnDelete.classList.add('btn_delete');
+  
+
+     btnDelete.addEventListener('click', (event) =>{
+        const item = event.target.parentElement;
+        carrito.removeChild(item); 
+
+});
+return btnDelete;
+}
  
-    const div = document.createElement('div');
-    const img = document.createElement('img');
-    const precio=document.createElement('span');
-
-    div.classList.add('producto');
-    img.classList.add('img');
-    precio.classList.add('precio');
-
-    img.src = 'img/img1.jpg';
-    precio.textContent = '3,50 €'; 
-
-    
-    div.appendChild(img);
-    div.appendChild(precio);
-    carrito.appendChild(div); 
-    
-    
-    agregarAlcarrito();
-});*/
-
-
-
-function agregarAlcarrito() {
-    console.log("funcion agregar funciona!!")
-    
-} 
 
