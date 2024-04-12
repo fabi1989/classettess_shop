@@ -1,6 +1,7 @@
 const btn_producto = document.querySelectorAll('.btn_agregarCarrito');
 const carrito = document.getElementById('carrito');
 const imagenproducto = document.querySelectorAll('.product__img')
+const tabla = document.querySelector('.tabla');
   
 for(let i=0; i<btn_producto.length;i++){
     btn_producto[i].addEventListener('click', ()=>{
@@ -19,11 +20,26 @@ for(let i=0; i<btn_producto.length;i++){
         img.src = imgsrc;
 
         precio.textContent = '3,50 €'; 
-
-        div.appendChild(img);
+        //muestro producto sin tabla
+        /* div.appendChild(img);
         div.appendChild(precio);
-        carrito.appendChild(div); 
+        carrito.appendChild(div);
+ */
 
+        //muestro producto con tabla(pero no funcional)
+        tabla.innerHTML += `
+        <tr>
+            <th>Precio</th>
+            <th>Eliminar</th>
+        </tr>
+
+        <tr>
+            <td>${imagenproducto[i].getAttribute('alt')}</td>
+            <td>3,50 €</td>
+            <td><img src="${imagenproducto[i].getAttribute('src')}" alt="${imagenproducto[i].getAttribute('alt')}"></td>
+            <td><button class="btn_delete">X</button></td>
+        </tr>
+        `;
 
     });
 }

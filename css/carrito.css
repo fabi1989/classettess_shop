@@ -26,11 +26,23 @@
     display: flex;
   }
   
+  
   .img{
-    width: 80px;
+    width: 40px;
   }
 
   .btn_delete{
     background-color: white;
     height: 20px;
   }
+
+
+  /* estilos de los productos de la tabla */
+  img{
+    width: 50px;
+  }
+
+ 
+
+
+  
