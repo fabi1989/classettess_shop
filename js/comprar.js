@@ -29,8 +29,10 @@ for(let i=0; i<btn_producto.length;i++){
         //muestro producto con tabla(pero no funcional)
         tabla.innerHTML += `
         <tr>
+            <th></th>        
             <th>Precio</th>
-            <th>Eliminar</th>
+            <th></th>
+            <th>Quitar</th>
         </tr>
 
         <tr>

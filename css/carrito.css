@@ -20,6 +20,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-bottom: 20px;
+    /* width: 500px; */
   }
 
   .producto{
@@ -42,7 +44,9 @@
     width: 50px;
   }
 
- 
+ td{
+  border-bottom: 1px dashed black;
+ }
 
 
   
