@@ -20,14 +20,17 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-bottom: 20px;
+    /* width: 500px; */
   }
 
   .producto{
     display: flex;
   }
   
+  
   .img{
-    width: 50px;
+    width: 40px;
   }
 
   .btn_delete{
@@ -38,3 +41,16 @@
       color: white;
     }
   }
+
+
+  /* estilos de los productos de la tabla */
+  img{
+    width: 50px;
+  }
+
+ td{
+  border-bottom: 1px dashed black;
+ }
+
+
+  

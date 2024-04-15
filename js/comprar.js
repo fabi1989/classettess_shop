@@ -1,6 +1,7 @@
 const btn_producto = document.querySelectorAll('.btn_agregarCarrito');
 const carrito = document.getElementById('carrito');
 const imagenproducto = document.querySelectorAll('.product__img')
+const tabla = document.querySelector('.tabla');
   
 for(let i=0; i<btn_producto.length;i++){
     btn_producto[i].addEventListener('click', ()=>{
@@ -19,22 +20,28 @@ for(let i=0; i<btn_producto.length;i++){
         img.src = imgsrc;
 
         precio.textContent = '3,50 €'; 
-
-        div.appendChild(img);
+        //muestro producto sin tabla
+        /* div.appendChild(img);
         div.appendChild(precio);
-        carrito.appendChild(div); 
-//agregue esta tabla
-        const fila = document.createElement('tr');
-        fila.innerHTML = `
-            <td><img src="${imgsrc}" alt="Producto"></td>
-            <td>x</td>
-            <td>${precio.textContent}</td>
-            <td>${btn_producto[i].textContent}</td>
-            
-        `;
-        const tabla = document.querySelector('table'); // Asegúrate de que tengas una tabla en tu HTML
-        tabla.appendChild(fila);
+        carrito.appendChild(div);
+ */
 
+        //muestro producto con tabla(pero no funcional)
+        tabla.innerHTML += `
+        <tr>
+            <th></th>        
+            <th>Precio</th>
+            <th></th>
+            <th>Quitar</th>
+        </tr>
+
+        <tr>
+            <td>${imagenproducto[i].getAttribute('alt')}</td>
+            <td>3,50 €</td>
+            <td><img src="${imagenproducto[i].getAttribute('src')}" alt="${imagenproducto[i].getAttribute('alt')}"></td>
+            <td><button class="btn_delete">X</button></td>
+        </tr>
+        `;
 
     });
 }
