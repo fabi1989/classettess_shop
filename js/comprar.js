@@ -29,16 +29,16 @@ for(let i=0; i<btn_producto.length;i++){
         //muestro producto con tabla(pero no funcional)
         tabla.innerHTML += `
         <tr>
-            <th></th>        
+            <th>Producto</th>        
             <th>Precio</th>
-            <th></th>
-            <th>Quitar</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
         </tr>
 
         <tr>
             <td>${imagenproducto[i].getAttribute('alt')}</td>
-            <td>3,50 €</td>
             <td><img src="${imagenproducto[i].getAttribute('src')}" alt="${imagenproducto[i].getAttribute('alt')}"></td>
+            <td>3,50 €</td>
             <td><button class="btn_delete">X</button></td>
         </tr>
         `;
