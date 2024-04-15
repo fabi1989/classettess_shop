@@ -8,10 +8,10 @@
 body {
   margin: 0;
 }
-img {
+ img {
   display: block;
-  width: 100%;
-}
+  width: 40px;
+} 
 
 .main-nav {
   display: none;

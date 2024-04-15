@@ -23,6 +23,17 @@ for(let i=0; i<btn_producto.length;i++){
         div.appendChild(img);
         div.appendChild(precio);
         carrito.appendChild(div); 
+//agregue esta tabla
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+            <td><img src="${imgsrc}" alt="Producto"></td>
+            <td>x</td>
+            <td>${precio.textContent}</td>
+            <td>${btn_producto[i].textContent}</td>
+            
+        `;
+        const tabla = document.querySelector('table'); // Asegúrate de que tengas una tabla en tu HTML
+        tabla.appendChild(fila);
 
 
     });
@@ -41,5 +52,6 @@ function addDelete(){
 });
 return btnDelete;
 }
+
  
 
