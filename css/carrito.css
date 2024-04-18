@@ -44,6 +44,15 @@
 
 
   /* estilos de los productos de la tabla */
+  #carrito{
+    display: flex;
+    align-items: center;
+  }
+
+  .tabla{
+    width: 700px;
+  }
+
   img{
     width: 50px;
   }
@@ -51,6 +60,7 @@
  td{
   border-bottom: 1px dashed black;
  }
+
 
 
   

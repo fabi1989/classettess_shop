@@ -2,6 +2,8 @@ const btn_producto = document.querySelectorAll('.btn_agregarCarrito');
 const carrito = document.getElementById('carrito');
 const imagenproducto = document.querySelectorAll('.product__img')
 const tabla = document.querySelector('.tabla');
+
+
   
 for(let i=0; i<btn_producto.length;i++){
     btn_producto[i].addEventListener('click', ()=>{
@@ -20,32 +22,52 @@ for(let i=0; i<btn_producto.length;i++){
         img.src = imgsrc;
 
         precio.textContent = '3,50 €'; 
-        //muestro producto sin tabla
-        /* div.appendChild(img);
-        div.appendChild(precio);
-        carrito.appendChild(div);
- */
 
-        //muestro producto con tabla(pero no funcional)
+        //muestro productos
         tabla.innerHTML += `
+        
         <tr>
-            <th></th>        
+            <th>Quitar</th> 
+            <th>Producto</th>
             <th>Precio</th>
-            <th></th>
-            <th>Quitar</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
         </tr>
 
         <tr>
-            <td>${imagenproducto[i].getAttribute('alt')}</td>
-            <td>3,50 €</td>
-            <td><img src="${imagenproducto[i].getAttribute('src')}" alt="${imagenproducto[i].getAttribute('alt')}"></td>
             <td><button class="btn_delete">X</button></td>
+            <td><img src="${imagenproducto[i].getAttribute('src')}" alt="${imagenproducto[i].getAttribute('alt')}"></td>
+            <td>3,50 €</td>
+            <td>
+            <select>
+                ${stock()}
+            </select>
+            </td>
+            <td>${subt()}</td>
+            <td>${imagenproducto[i].getAttribute('alt')}</td>
         </tr>
         `;
 
     });
 }
 
+//cantidad
+function stock() {
+    let cantidad = '';
+    for (let i = 1; i <= 10; i++) {
+        cantidad += `<option>${i}</option>`;
+    }
+    return cantidad;
+}
+
+//subtotal
+function subt(stock, precio) {
+    const subtotal = stock * precio;
+    return subtotal;
+}
+
+
+//boton borrar
 function addDelete(){
     const btnDelete = document.createElement("button");
     btnDelete.textContent='X';
