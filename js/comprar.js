@@ -29,14 +29,19 @@ for(let i=0; i<btn_producto.length;i++){
         <tr>
             <th>Quitar</th> 
             <th>Producto</th>
+            <th>Producto</th>        
             <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
             <th>Cantidad</th>
             <th>Subtotal</th>
         </tr>
 
         <tr>
             <td><button class="btn_delete">X</button></td>
+            <td>${imagenproducto[i].getAttribute('alt')}</td>
             <td><img src="${imagenproducto[i].getAttribute('src')}" alt="${imagenproducto[i].getAttribute('alt')}"></td>
+            <td>3,50 €</td>
             <td>3,50 €</td>
             <td>
             <select>
