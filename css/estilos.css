@@ -23,6 +23,12 @@ body {
   margin: 10px 0;
 }
 
+.header__btn:hover{
+  background-color: rgb(233, 230, 230);
+  color: white;
+  border-radius: 50%;
+}
+
 .icon-menu{
   font-size: 1.5em;
   border: 1px solid black;
@@ -30,6 +36,7 @@ body {
   padding: 8px 8px;
   cursor: pointer;
 }
+
 
 .main {
   padding: 20px;
@@ -42,6 +49,7 @@ body {
   padding-bottom: 5px;
   padding-top: 5px;
   border-top: 1px dashed black;
+  margin-top: 25px;
 }
 
 /* ESTILOS DE PRODUCTOS*/
