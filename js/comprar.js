@@ -4,6 +4,7 @@ const imagenproducto = document.querySelectorAll('.product__img')
 const tabla = document.querySelector('.tabla');
 
 
+  //------------recorrer elementos -----------------//
 for(let i=0; i<btn_producto.length;i++){
     btn_producto[i].addEventListener('click', ()=>{
 
@@ -20,8 +21,8 @@ for(let i=0; i<btn_producto.length;i++){
         img.src = imgsrc;
 
         precio.textContent = '3,50 €'; 
-
-        //muestro productos
+        
+        //--------------------muestro productos----------------//
         tabla.innerHTML += `
         <tr>
             <th>Quitar</th> 
@@ -44,10 +45,11 @@ for(let i=0; i<btn_producto.length;i++){
             <td>${imagenproducto[i].getAttribute('alt')}</td>
         </tr>
         `;
+        
     });
 }
 
-//cantidad
+//-------------cantidad-----------//
 function stock() {
     let cantidad = '';
     for (let i = 1; i <= 10; i++) {
@@ -59,9 +61,11 @@ function stock() {
 //crear funcion que muestre subtotal
 function subt() {
     
+    
 }
+ 
 
-//boton borrar
+//-------------boton borrar------------//
 function addDelete(){
     const btnDelete = document.createElement("button");
     btnDelete.textContent='X';
@@ -72,6 +76,7 @@ function addDelete(){
      btnDelete.addEventListener('click', (e) =>{
         const item = e.target.parentElement;
         carrito.removeChild(item); 
+
 });
 return btnDelete;
 }
