@@ -4,7 +4,6 @@ const imagenproducto = document.querySelectorAll('.product__img')
 const tabla = document.querySelector('.tabla');
 
 
-  
 for(let i=0; i<btn_producto.length;i++){
     btn_producto[i].addEventListener('click', ()=>{
 
@@ -17,7 +16,6 @@ for(let i=0; i<btn_producto.length;i++){
         precio.classList.add('precio');
         div.appendChild(addDelete());
         
-
         const imgsrc = imagenproducto[i].getAttribute('src');
         img.src = imgsrc;
 
@@ -25,14 +23,12 @@ for(let i=0; i<btn_producto.length;i++){
 
         //muestro productos
         tabla.innerHTML += `
-        
         <tr>
             <th>Quitar</th> 
             <th>Producto</th>        
             <th>Precio</th>
             <th>Cantidad</th>
             <th>Subtotal</th>
-            
         </tr>
 
         <tr>
@@ -40,15 +36,14 @@ for(let i=0; i<btn_producto.length;i++){
             <td><img src="${imagenproducto[i].getAttribute('src')}" alt="${imagenproducto[i].getAttribute('alt')}"></td>
             <td>3,50 €</td>
             <td>
-            <select>
-                ${stock()}
-            </select>
+                <select> selectElement.id = 'miSelect';
+                    ${stock()}
+                </select>
             </td>
             <td>${subt()}</td>
             <td>${imagenproducto[i].getAttribute('alt')}</td>
         </tr>
         `;
-
     });
 }
 
@@ -61,12 +56,10 @@ function stock() {
     return cantidad;
 }
 
-//subtotal
-function subt(stock, precio) {
-    const subtotal = stock * precio;
-    return subtotal;
+//crear funcion que muestre subtotal
+function subt() {
+    
 }
-
 
 //boton borrar
 function addDelete(){
@@ -74,14 +67,12 @@ function addDelete(){
     btnDelete.textContent='X';
     btnDelete.classList.add('btn_delete');
   
-
-     btnDelete.addEventListener('click', (event) =>{
-        const item = event.target.parentElement;
+    
+    
+     btnDelete.addEventListener('click', (e) =>{
+        const item = e.target.parentElement;
         carrito.removeChild(item); 
-
 });
 return btnDelete;
 }
-
- 
 
