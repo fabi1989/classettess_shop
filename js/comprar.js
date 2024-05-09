@@ -72,7 +72,6 @@ function addDelete(){
     btnDelete.classList.add('btn_delete');
   
     
-    
      btnDelete.addEventListener('click', (e) =>{
         const item = e.target.parentElement;
         carrito.removeChild(item); 

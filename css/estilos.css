@@ -58,7 +58,17 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
+  padding: 20px;
   /* cursor: pointer; */
+}
+
+.card-body{
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 230px;
 }
 
 .product {
@@ -94,6 +104,7 @@ body {
 .product__price {
   color: black;
   font-weight: bold;
+  text-align: center;
 }
 .product__icon {
   display: block;
@@ -122,9 +133,6 @@ body {
   color: #fff;
   border: transparent;
 }
-
-
-
 
 
 

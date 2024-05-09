@@ -16,12 +16,18 @@
     font-family: "SugarPie";
   }
 
-  .carrito{
+  #carrito{
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-bottom: 20px;
+    list-style-type: none;
     /* width: 500px; */
+  }
+
+  aside{
+    padding: 20px;
+    text-align: center;
   }
 
   .producto{
@@ -42,6 +48,14 @@
     }
   }
 
+  #boton-vaciar{
+    background: black;
+    color: white;
+    &:hover{
+      background: rgb(51, 50, 50);
+      color: white;
+    }
+  }
 
   /* estilos de los productos de la tabla */
   #carrito{

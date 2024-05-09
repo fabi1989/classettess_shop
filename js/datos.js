@@ -1,4 +1,4 @@
-const calcetines = [
+/* const calcetines = [
     {
         "id": "1",
         "imagen": "img/img1.jpg",
@@ -321,4 +321,4 @@ const nuevaFuncion = ()=>{
     })
     
 }
-nuevaFuncion();
+nuevaFuncion(); */
