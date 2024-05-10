@@ -20,21 +20,28 @@
           <a class="header__title">Classettes</a>
         </div>
       </div>
-                             <!--Botones de barra de navegacion-->
+        <!--Botones de barra de navegacion-->
       <div class="header__content__right">
         <a href="formulario.html" class="header__btn">
           <i class="fas fa-user"></i>
         </a>
-        <a href="carrito.html" class="header__btn">
-          <i class="fas fa-shopping-cart"></i>
-        </a>
+
+        <div class="contadorProductos">
+            <a class="header__btn"  onclick="verCarrito()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="contadorProductos">
+
+                </span>
+            </a>
+        </div>
+
         <a href="contact.html" class="header__btn">
           <i class="fas fa-envelope"></i>
         </a>
       </div>
     </div>
   </header>
-<!--FIN HEADER-->
+    <!--FIN HEADER-->
 
   <main class="main">
     <div class="container">
@@ -44,8 +51,36 @@
     </div>
   </main>
 
+  <div class="container">
+    <!-- Carrito -->
+    <dialog id="carritoVentana">
+        <aside class="col-sm-4">
+            <h2>Carrito</h2>
+            <!-- Elementos del carrito -->
+            <ul id="carrito" class="list-group"></ul>
+            <hr>
+            <!-- Precio total -->
+            <p class="text-right">Total: <span id="total"></span>&euro;</p>
+            <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+            <button id="boton-vaciar" class="btn btn-danger" onclick="carritoVentana.close();">Cerrar</button>
+        </aside>
+    </dialog>    
+        
+        <div class="row">
+            <!-- Elementos generados a partir del JSON -->
+            <main id="items" class="container-products"><!-- class="col-sm-8 row" -->
+
+            </main> 
+            
+        </div>
+</div>
+
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"> -->
     <script>
+        function verCarrito(){
+                document.getElementById('carritoVentana').showModal();
+            }
+
         document.addEventListener('DOMContentLoaded', () => {
           // Variables
           const baseDeDatos = [
@@ -128,226 +163,226 @@
         precio: 3.50,
     },
     {
-        "id": "14",
-        "imagen": "img/img14.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 14,
+        imagen: "img/img14.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "15",
-        "imagen": "img/img15.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 15,
+        imagen: "img/img15.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "16",
-        "imagen": "img/img16.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 16,
+        imagen: "img/img16.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "17",
-        "imagen": "img/img17.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 17,
+        imagen: "img/img17.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "18",
-        "imagen": "img/img18.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 18,
+        imagen: "img/img18.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "19",
-        "imagen": "img/img19.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 19,
+        imagen: "img/img19.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "20",
-        "imagen": "img/img20.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 20,
+        imagen: "img/img20.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "21",
-        "imagen": "img/img21.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 21,
+        imagen: "img/img21.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "22",
-        "imagen": "img/img22.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 22,
+        imagen: "img/img22.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "23",
-        "imagen": "img/img23.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 23,
+        imagen: "img/img23.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "24",
-        "imagen": "img/img24.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 24,
+        imagen: "img/img24.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "25",
-        "imagen": "img/img25.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 25,
+        imagen: "img/img25.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "26",
-        "imagen": "img/img26.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 26,
+        imagen: "img/img26.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "27",
-        "imagen": "img/img27.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 27,
+        imagen: "img/img27.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "28",
-        "imagen": "img/img28.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 28,
+        imagen: "img/img28.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "29",
-        "imagen": "img/img29.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 29,
+        imagen: "img/img29.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "30",
-        "imagen": "img/img30.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 30,
+        imagen: "img/img30.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "31",
-        "imagen": "img/img31.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 31,
+        imagen: "img/img31.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "32",
-        "imagen": "img/img32.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 32,
+        imagen: "img/img32.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "33",
-        "imagen": "img/img33.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 33,
+        imagen: "img/img33.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "34",
-        "imagen": "img/img34.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 34,
+        imagen: "img/img34.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "35",
-        "imagen": "img/img35.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 35,
+        imagen: "img/img35.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "36",
-        "imagen": "img/img36.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 36,
+        imagen: "img/img36.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "37",
-        "imagen": "img/img37.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 37,
+        imagen: "img/img37.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "38",
-        "imagen": "img/img38.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 38,
+        imagen: "img/img38.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "39",
-        "imagen": "img/img39.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 39,
+        imagen: "img/img39.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "40",
-        "imagen": "img/img40.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 40,
+        imagen: "img/img40.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "41",
-        "imagen": "img/img41.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 41,
+        imagen: "img/img41.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "42",
-        "imagen": "img/img42.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 42,
+        imagen: "img/img42.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "43",
-        "imagen": "img/img43.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 43,
+        imagen: "img/img43.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "44",
-        "imagen": "img/img44.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 44,
+        imagen: "img/img44.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "45",
-        "imagen": "img/img45.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 45,
+        imagen: "img/img45.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "46",
-        "imagen": "img/img46.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 46,
+        imagen: "img/img46.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "47",
-        "imagen": "img/img47.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 47,
+        imagen: "img/img47.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "48",
-        "imagen": "img/img48.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 48,
+        imagen: "img/img48.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "49",
-        "imagen": "img/img49.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 49,
+        imagen: "img/img49.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     },
     {
-        "id": "50",
-        "imagen": "img/img50.jpg",
-        "nombre": "¡Añádelo a tu colección de moda ahora mismo!",
-        "precio": "3.50",
+        id: 50,
+        imagen: "img/img50.jpg",
+        nombre: "¡Añádelo a tu colección de moda ahora mismo!",
+        precio: 3.50,
     }
           ];
 
@@ -449,6 +484,7 @@
               });
              // Renderizamos el precio total en el HTML
              DOMtotal.textContent = calcularTotal();
+             document.getElementById('contadorProductos').innerHTML= carrito.length;
           }
 
           /**
@@ -495,6 +531,8 @@
               localStorage.clear();
           }
 
+          
+
           function guardarCarritoEnLocalStorage () {
                 miLocalStorage.setItem('carrito', JSON.stringify(carrito));
             }
@@ -516,28 +554,8 @@
           renderizarCarrito();
         });
     </script>
-</head>
-<body>
-    <div class="container">
-        <!-- Carrito -->
-        <aside class="col-sm-4">
-            <h2>Carrito</h2>
-            <!-- Elementos del carrito -->
-            <ul id="carrito" class="list-group"></ul>
-            <hr>
-            <!-- Precio total -->
-            <p class="text-right">Total: <span id="total"></span>&euro;</p>
-            <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-        </aside>
-        
-        <div class="row">
-            <!-- Elementos generados a partir del JSON -->
-            <main id="items" class="container-products"><!-- class="col-sm-8 row" -->
 
-            </main> 
-            
-        </div>
-    </div>   
+   
 
   <footer class="pie_pagina">
     <div class="titulo_pie">

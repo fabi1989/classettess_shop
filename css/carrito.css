@@ -62,6 +62,15 @@
     display: flex;
     align-items: center;
   }
+  
+  .contadorProductos{
+    position:relative;
+    width: 40px;
+    height: 40px;
+  }
+  #contadorProductos{
+    position: absolute;
+  }
 
   .tabla{
     width: 700px;
