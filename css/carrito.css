@@ -48,9 +48,17 @@
     }
   }
 
+  .container_btn_carrito{
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+
   #boton-vaciar{
     background: black;
     color: white;
+    margin-bottom: 10px;
     &:hover{
       background: rgb(51, 50, 50);
       color: white;
@@ -62,15 +70,42 @@
     display: flex;
     align-items: center;
   }
-  
-  .contadorProductos{
-    position:relative;
+
+  .list-group-item{
+    display: flex;
+    align-items: center;
+  }
+
+  .carrito-marco  {
+    display : inline-block;
     width: 40px;
-    height: 40px;
+    img {
+      padding-top:3px;
+      width: 100%;
+    }
   }
-  #contadorProductos{
+  
+  h2{
+    border-bottom: 1px solid grey;
+  }
+  
+
+  .contadorProductos {
+    position: relative;
+  }
+
+  
+
+.contadorProductos #contadorProductos {
     position: absolute;
-  }
+    top: -5px;
+    right: -5px; 
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+}
 
   .tabla{
     width: 700px;

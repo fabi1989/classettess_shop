@@ -50,6 +50,7 @@ body {
   padding-top: 5px;
   border-top: 1px dashed black;
   margin-top: 25px;
+  font-size: 25px;
 }
 
 /* ESTILOS DE PRODUCTOS*/
@@ -136,7 +137,6 @@ body {
 
 
 
-
 /* RESPONSIVE */
 /* Móvil */
 @media only screen and (max-width: 600px){
@@ -146,6 +146,50 @@ body {
     grid-gap: 10px;
     /* cursor: pointer; */
   }
+
+  #carrito{
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+  }
+
+  .carrito-marco{
+    display: flex;
+    justify-content: center;
+  }
+
+  .list-group-item{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .input-container {
+    width: 0%;
+    max-width: 300px;
+  }
+
+  .main_tittle{
+    border-bottom: 1px dashed black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-top: 1px dashed black;
+    margin-top: 25px;
+    font-size: 15px;
+  }
+
+  .container_btn_carrito{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-items: center;
+  }
+
+  #boton-vaciar{
+    margin-bottom: 10px;
+  }
+  
 }
 
 /* Tablet */
