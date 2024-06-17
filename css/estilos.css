@@ -112,6 +112,11 @@ body {
   margin-top: 10px;
 }
 
+::backdrop{
+  background-color: rgb(233, 230, 230,0.308);
+  backdrop-filter: blur(3px);
+}
+
 .btn_agregarCarrito {
   background-color: transparent;
   border: 2px solid black;
