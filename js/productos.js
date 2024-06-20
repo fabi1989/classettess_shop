@@ -399,7 +399,7 @@ function renderizarCarrito() {
         miImagen.src= `${miItem[0].imagen}`;
         miMarco.appendChild(miImagen);
         miNodo.appendChild(miMarco);
-        const contenidoProducto = document.createTextNode(`${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`);
+        const contenidoProducto = document.createTextNode(`${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio.toFixed(2)}${divisa}`);
         miNodo.appendChild(contenidoProducto);
       // Boton de borrar
       const miBoton = document.createElement('button');
